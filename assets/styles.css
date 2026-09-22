@@ -79,7 +79,7 @@ body {
   color: var(--text-main);
   transition: var(--transiition);
   overflow-x: hidden;
-  width: 100vh;
+  width: 100vw;
   min-height: 100vh;
 }
 
@@ -140,4 +140,34 @@ Inside each region Flexbox is used to arrange elements.
   height: 100vh;
   border-right: 1px solid var(--border-color);
   padding: clamp(20px, 2.5vw, 32px) clamp(16px, 1.8vw, 24px);
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  z-index: 100;
+  transition: var(--transition);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo i {
+  font-size: clamp(24px, 2vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* User Profile Container */
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
 }
